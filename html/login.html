@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../login-css.css" media="screen" />
+    <script src="../login-js.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form id="loginForm">
+             <div class="textbox">
+                <div id="textbox1">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" placeholder="Usuário" required>
+                </div>
+                
+                <div id="textbox2">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Senha" required>
+                </div>
+             </div>
+
+                <div class="fp">
+                    <a href="newuser.html">Não possui um cadastro?</a>
+                </div>
+                <div class="fp">
+                    <a href="forgotpassword.html">Esqueceu sua Senha?</a>
+                </div>
+
+                <button type="button" onclick="validateLogin()">Login</button>
+                <div id="message" class="error-message"></div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
