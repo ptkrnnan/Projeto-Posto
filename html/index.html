@@ -2,9 +2,8 @@
 <html lang="pt-br">
 <head>
     <!--Carregando API MapsJS-->
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdn4u_hkelqkB3caEpROmmGe7_-cF6GoI&callback=initMap">
-    </script>
+    <!--<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdn4u_hkelqkB3caEpROmmGe7_-cF6GoI&callback=initMap"> </script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDdn4u_hkelqkB3caEpROmmGe7_-cF6GoI&callback=initMap"async defer></script>
 
     <!--Importando Arquivo js-->
     <script src="../javascript/script.js"></script>
@@ -13,9 +12,22 @@
     <link rel="stylesheet" href="../css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POSTO</title>
+    <title>PV Mobilidade</title>
 </head>
 <body>
+
+    <!-- Search input -->
+<input id="searchInput" class="controls" type="text" placeholder="Enter a location">
+
     <div id="map"></div>
+
+    <!-- Display geolocation data -->
+<ul class="geo-data">
+    <li>Full Address: <span id="location"></span></li>
+    <li>Postal Code: <span id="postal_code"></span></li>
+    <li>Country: <span id="country"></span></li>
+    <li>Latitude: <span id="lat"></span></li>
+    <li>Longitude: <span id="lon"></span></li>
+</ul>
 </body>
 </html>
