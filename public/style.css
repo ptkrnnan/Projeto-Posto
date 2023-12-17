@@ -2,28 +2,97 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 #map {
+    flex: 1;
     height: 100%;
   }
 
-  /* Estilo para o contêiner do mapa */
-.map-container {
-    position: relative;
+
+  /* SIDEBAR */
+  .container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
   }
   
-  /* Estilo geral para a caixa de pesquisa */
+  .sidebar {
+    width: 280px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1000;
+    transition: width 0.3s;
+    overflow: hidden;
+    
+  }
+
+  .sidebar.collapsed {
+    width: 20px;
+    
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .logo {
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+  
+  .toggle-button {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-items {
+    padding: 10px;
+  }
+
+  .menu-item {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    background-color: #e0e0e0;
+  }
+
+  .sidebar.collapsed .menu-item {
+    display: none; /* Oculta os itens quando a barra lateral está recolhida */
+  }
+
+  .sidebar.collapsed .logo {
+    display: none; /* Oculta os itens quando a barra lateral está recolhida */
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+  }
+
+  
+  /* SEARCHBOX */
   .search-box {
     position: absolute;
     top: 10px; /* Ajuste conforme necessário */
-    left: 200px; /* Ajuste conforme necessário */
+    left: 80px; /* Ajuste conforme necessário */
     display: flex;
     align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    z-index: 1000; /* Garante que o search box apareça sobre o mapa */
+    z-index: 1; /* Garante que o search box apareça sobre o mapa */
   }
   
   /* Estilo para o campo de entrada da caixa de pesquisa */
@@ -42,7 +111,6 @@ html, body {
     color: #555;
     cursor: pointer;
   }
-
   
 
   

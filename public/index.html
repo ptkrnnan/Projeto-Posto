@@ -12,13 +12,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="map"></div>
+    <div class="container">
+      <!--<div class="sidebar">-->
+      <div class="sidebar collapsed">
+        <div class="header">
+          <div class="logo">Consultar</div>
+          <div class="toggle-button">&#9654;</div>
+        </div>
 
-    <div class="search-box">
-      <input id="searchInput" type="text"  class="controls" placeholder="Pesquise na sua região" />
-      <div class="search-icon">&#128269;</div>
+        <div class="menu-items">
+          <div class="menu-item">Área do Usuário</div>
+          <div class="menu-item">Cadastrar</div>
+          <div class="menu-item">Item 3</div>
+        </div>
+      </div>
+
+      
+
+      <main class="content">
+        <!-- Seu conteúdo principal aqui -->
+        <div id="map"></div>
+
+        <div class="search-box">
+          <input id="searchInput" type="text"  class="controls" placeholder="Pesquise na sua região" />
+          <div class="search-icon">&#128269;</div>
+        </div>
+      </main>
     </div>
-
 
     <ul class="geo-data">
       <li>Full Address: <span id="location"></span></li>
@@ -28,23 +48,6 @@
       <li>Longitude: <span id="lon"></span></li>
     </ul>
 
-    <!--<div class="map-container">
-
-      <div id="map"></div>
-
-      
-      <div class="search-box">
-        <div class="search-icon">&#128269;</div>
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Pesquisar no mapa"
-        />
-      </div>
-
-      
-      
-    </div>-->
     <!--Carregando API MapsJS-->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdn4u_hkelqkB3caEpROmmGe7_-cF6GoI&callback=initMap" async defer> </script>-->
     <script
@@ -52,6 +55,6 @@
       async
       defer
     ></script>
-
+    <script src="script-html.js"></script>
   </body>
 </html>
