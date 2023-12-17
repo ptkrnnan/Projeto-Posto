@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+  }
+
+  /* Estilo para o contêiner do mapa */
+.map-container {
+    position: relative;
+  }
+  
+  /* Estilo geral para a caixa de pesquisa */
+  .search-box {
+    position: absolute;
+    top: 10px; /* Ajuste conforme necessário */
+    left: 200px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000; /* Garante que o search box apareça sobre o mapa */
+  }
+  
+  /* Estilo para o campo de entrada da caixa de pesquisa */
+  .controls {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 500px;
+  }
+  
+  /* Estilo para o ícone de pesquisa */
+  .search-icon {
+    margin-left: 10px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  
+
+  

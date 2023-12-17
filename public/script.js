@@ -10,9 +10,9 @@ async function initMap() {
     zoom: 5,
     panControl: false,
     maxZoom: 16,
-    minZoom: 1,
+    minZoom: 0,
     overviewMapControl: true,
-    mapTypeControl: true,
+    mapTypeControl: false,
     scaleControl: true
   });
 
@@ -72,7 +72,7 @@ async function initMap() {
   };
 
   var input = document.getElementById('searchInput');
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    /*map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);*/
 
     var autocomplete = new google.maps.places.Autocomplete(input);
     autocomplete.bindTo('bounds', map);
@@ -138,4 +138,4 @@ async function initMap() {
 
 
 }
-initMap();
+/*initMap();*/
